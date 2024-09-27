@@ -6,9 +6,13 @@
 
 03. Configure the AWS Credentials
 >$ aws configure
+
 >AWS Access Key ID [None]: insert your access key id
+
 >AWS Secret Access Key [None]: insert secret access key
+
 >Default region name [None]: us-east-2
+
 >Default output format [None]: json
 
 04. Create a file to track the aws resources
@@ -19,6 +23,7 @@
 
 06. Modify the permissions the for file & execute it
 >$ chmod 777 aws_rt.sh
+
 >$ ./aws_rt.sh
 
 07. Output should be printed with the respective details
