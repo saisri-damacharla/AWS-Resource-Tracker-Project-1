@@ -7,14 +7,20 @@
 # This script will report the usage of AWS resources
 #################
 
+set -x
+
 #list aws s3
+echo "print the information of available s3 buckets"
 aws s3 ls
 
 #list aws ec2
-aws ec2 describe-instances
+echo "print the information of available ec2 instances"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
 
 #list aws lambda
+echo "print the information of available lambda functions"
 aws lambda list-functions
 
 #list aws iam users
-aws iam list-users
+echo "print the list of available iam users"
+aws iam list-users | jq '.Users[].UserName'
